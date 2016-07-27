@@ -14,11 +14,13 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: aat_development
+default: &default  
   pool: 5
+  timeout: 5000
+
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
   username: jarvis
   password: 123456
 
@@ -43,18 +45,16 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: aat_test
-  pool: 5
-  username: aat
-  password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: aat_production
-  pool: 5
-  username: aat
-  password:
+development:  
+  <<: *default
+  database: aat_development
+
+test:  
+  <<: *default
+  database: aat_test
+
+production:  
+  <<: *default
+  database: at_production
+
