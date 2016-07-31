@@ -6,6 +6,8 @@ gem 'rails', '4.0.13'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'bootstrap-sass'
+
 gem 'rake', "~> 11.1.2"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -34,7 +36,7 @@ group :doc do
 end
 
 gem 'rails_12factor', group: :production  
-# heroku subimegem 'unicorn'
+gem 'unicorn'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

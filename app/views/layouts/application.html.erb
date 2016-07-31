@@ -1,57 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grupo-Wala</title>
+  <title>DevelomentpTeam</title>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<script>
-    $(function() {
-      $("#slider-home").responsiveSlides({
-        speed:500,
-        nav:true,
-        namespace: 'slid-btns',
-        pause:false
-      });
-    });
-</script>
 
-	<header>
-		<nav class="be-uni white large-padding">
-			<ul class="no-list row center-xs">
-				<li class="col-md">
-					<h1 class="no-margin" id="logo">WALA</h1>
-				</li>
-				<li class="col-md">
-					<%= link_to "Wilbert", :controller => "wilbert" , :action => "index2" %>
-				</li>
-				<ul class="col-md"->
-					
-					<%= link_to "Comentario", :controller => "articles" , :action => "index" %>
-				</ul>
-				<li class="col-md">
-				    <%= link_to "Luis", :controller => "luis" , :action => "index3" %>
-				</li>
-				<li class="col-md">
-				    <%= link_to "Aaron", :controller => "aaron" , :action => "index4" %>
-				</li>
-			</ul>
-		</nav>
+
+
+<body>
+
+
+
+<header>
+		<div class="wrapper">
+			<div class="logo">DevelomentpTeam</div>
+			
+			<nav>
+				<%= link_to "INICIO", :controller => "alejandro", :action => "index" %>
+				<%= link_to "Comentarios", :controller => "articles", :action => "index" %>
+				<%= link_to "Servicios", :controller => "alejandro", :action => "index" %>
+				<%= link_to "Contacto", :controller => "alejandro", :action => "index" %>
+			</nav>
+		</div>
 	</header>
 
-<div class="container" style="width:100%;background-color: #2158FF;">
+<div class="container" style="width:100%;">
 	
 
 
-<div class="container" style="width:40%;">
-	
+<div class="container" style="width:100%;margin-top:10%;margin-bottom:10%;">
+	<section>
 
 	<%= yield %>
 
-
+</section>
 </div>
 
 
@@ -63,8 +48,8 @@
 </body>
 
 <footer class="primary-footer" style="color: #FFFFFF;width: 100%;text-align: center;">
-    <div class="container" style="width:100%;background-color:#003485;">
-      <small>&copy; 2016 Todo los derecho Reservados <a href="building-custom-context-menu-javascript" target="_blank">See article </a></small>
+    <div class="container" style="width:100%;background-color:#252932;">
+      <small>&copy; 2016 Todo los derecho Reservados <a href="http://arcdn02.mundotkm.com/2015/08/perro-jugando.jpg" target="_blank">See article </a></small>
     </div>
 </footer>
 

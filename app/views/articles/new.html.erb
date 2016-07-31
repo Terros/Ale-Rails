@@ -1,13 +1,1 @@
-<%= form_for(@article) do |f| %>
-<div class="field">
-	<%= f.text_field :title, placeholder: "titulo" %>
-</div>
-<div class="field">
-	<%= f.text_area :body, placeholder: "Escriba aqui el articulo" %>
-</div>
-
-<div class="field">
-	<%= f.submit "guardar" %>
-</div>
-
-<%end%>
+<%= render "form" ,name: "Crear"%>
